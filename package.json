@@ -1,0 +1,17 @@
+{
+    "name": "adventtocode2024",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "run:day": "node day-$npm_config_day/part$npm_config_part.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "jest": "^29.7.0"
+    }
+}
