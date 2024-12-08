@@ -1,4 +1,4 @@
-import { readInput } from "../../utils/fileReader.js";
+import {readInput} from "../../utils/fileReader.js";
 
 /**
  * Resolve o problema da Parte 2.
@@ -7,7 +7,7 @@ import { readInput } from "../../utils/fileReader.js";
  */
 const solvePart1 = (data) => {
     const dataList = data.replaceAll("\r", "").split("\n");
-    const matrix = dataList.map(item => item.split(""));
+    const matrix = dataList.map((item) => item.split(""));
 
     const rows = matrix.length;
     const cols = matrix[0].length;
@@ -29,14 +29,14 @@ const solvePart1 = (data) => {
         const bottomRight = matrix[i + 1][j + 1];
 
         if (
-            (
-                (topLeft == "M" || topLeft == "S") && (bottomRight == "M" || bottomRight == "S") && topLeft !== bottomRight
-            )
-            &&
-            (
-                (topRight == "M" || topRight == "S") && (bottomLeft == "M" || bottomLeft == "S") && topRight !== bottomLeft
-            )
-        ) return true
+            (topLeft == "M" || topLeft == "S") &&
+            (bottomRight == "M" || bottomRight == "S") &&
+            topLeft !== bottomRight &&
+            (topRight == "M" || topRight == "S") &&
+            (bottomLeft == "M" || bottomLeft == "S") &&
+            topRight !== bottomLeft
+        )
+            return true;
 
         return false;
     }
